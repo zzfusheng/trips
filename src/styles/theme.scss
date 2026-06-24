@@ -1,0 +1,42 @@
+// ============================================
+// 主题配色变量（现代简约高大上标准）
+// ============================================
+
+// 品牌主色：低饱和度深蓝色，专业稳重
+$color-primary: #0052D9;
+$color-primary-light: #4A7FD9;
+$color-primary-dark: #003DA6;
+$color-primary-hover: #0066FF;
+
+// 辅助强调色：低饱和度珊瑚色
+$color-accent: #E85D75;
+$color-accent-light: #F58A9B;
+
+// 功能色
+$color-success: #34C759;
+$color-warning: #FF9500;
+$color-error: #FF3B30;
+$color-info: #007AFF;
+
+// 背景色：大面积使用纯白或极浅灰，营造呼吸感
+$color-bg-page: #F7F8FA;
+$color-bg-card: #FFFFFF;
+$color-bg-hover: #F0F1F2;
+$color-bg-input: #FAFAFA;
+$color-bg-disabled: #F5F5F7;
+
+// 文字色：建立清晰的信息层级
+$color-text-primary: #1D1D1F;    // 标题用深黑
+$color-text-secondary: #6E6E73;  // 正文用中灰
+$color-text-tertiary: #9B9B9B;   // 辅助信息用浅灰
+$color-text-disabled: #C7C7CC;
+$color-text-white: #FFFFFF;
+
+// 边框色：弱化边框，用留白区分区块
+$color-border: #E8E8ED;
+$color-divider: #F0F0F2;
+$color-border-light: #F5F5F7;
+
+// 业务色
+$color-tag-bg: #EEF4FF;
+$color-tag-text: #0052D9;

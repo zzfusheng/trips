@@ -1,0 +1,218 @@
+@use '@/styles/variables.scss' as *;
+
+.page {
+  min-height: 100vh;
+  background: $color-bg-page;
+}
+
+.form {
+  padding: $spacing-md $page-padding;
+}
+
+.field {
+  background: $color-bg-card;
+  border-radius: $radius-md;
+  padding: $spacing-lg;
+  margin-bottom: $spacing-md;
+  box-shadow: $shadow-card;
+}
+
+.fieldLabel {
+  font-size: $font-size-sm;
+  color: $color-text-tertiary;
+  display: block;
+  margin-bottom: $spacing-sm;
+}
+
+.fieldInput {
+  width: 100%;
+  font-size: $font-size-md;
+  color: $color-text-primary;
+  line-height: $line-height-normal;
+}
+
+.fieldInput::placeholder {
+  color: $color-text-disabled;
+}
+
+.fieldValue {
+  font-size: $font-size-md;
+  color: $color-text-primary;
+  display: flex;
+  align-items: center;
+  gap: $spacing-xs;
+}
+
+.fieldArrow {
+  font-size: 24rpx;
+  color: $color-text-tertiary;
+}
+
+.pickerGroup {
+  display: flex;
+  gap: $spacing-md;
+}
+
+.pickerItem {
+  flex: 1;
+  background: $color-bg-card;
+  border-radius: $radius-md;
+  padding: $spacing-lg;
+  box-shadow: $shadow-card;
+  display: flex;
+  align-items: center;
+  gap: $spacing-xs;
+  transition: all $transition-base;
+
+  &:active {
+    opacity: 0.9;
+  }
+}
+
+.pickerLabel {
+  font-size: $font-size-sm;
+  color: $color-text-tertiary;
+}
+
+.pickerValueWrap {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  justify-content: flex-end;
+}
+
+.pickerValue {
+  font-size: $font-size-md;
+  color: $color-text-primary;
+}
+
+.pickerArrow {
+  font-size: 20rpx;
+  color: $color-text-tertiary;
+  margin-left: $spacing-xs;
+}
+
+.remindField {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.remindLabel {
+  font-size: $font-size-md;
+  color: $color-text-primary;
+}
+
+.remindSwitch {
+  width: 80rpx;
+  height: 44rpx;
+  border-radius: 22rpx;
+  background: $color-border;
+  position: relative;
+  transition: all $transition-base;
+}
+
+.remindActive {
+  background: $color-primary;
+}
+
+.remindDot {
+  position: absolute;
+  top: 4rpx;
+  left: 4rpx;
+  width: 36rpx;
+  height: 36rpx;
+  border-radius: $radius-round;
+  background: $color-text-white;
+  transition: all $transition-base;
+  box-shadow: 0 2rpx 4rpx rgba(0, 0, 0, 0.1);
+}
+
+.remindDotActive {
+  left: 40rpx;
+}
+
+.remindOptions {
+  display: flex;
+  gap: $spacing-sm;
+  margin-top: $spacing-md;
+}
+
+.remindOption {
+  flex: 1;
+  text-align: center;
+  padding: $spacing-sm;
+  border-radius: $radius-sm;
+  background: $color-bg-hover;
+  transition: all $transition-base;
+
+  &:active {
+    opacity: 0.9;
+  }
+}
+
+.remindOptionActive {
+  background: $color-primary;
+}
+
+.remindOptionText {
+  font-size: $font-size-xs;
+  color: $color-text-secondary;
+}
+
+.remindOptionTextActive {
+  color: $color-text-white;
+  font-weight: $font-weight-medium;
+}
+
+.submitBtn {
+  width: 100%;
+  height: $button-height-lg;
+  background: linear-gradient(135deg, $color-primary 0%, $color-primary-light 100%);
+  border-radius: $radius-button;
+  @include flex-center;
+  margin-top: $spacing-lg;
+  transition: all $transition-base;
+
+  &:active {
+    opacity: 0.9;
+    transform: scale(0.98);
+  }
+}
+
+.submitBtnText {
+  font-size: $font-size-lg;
+  color: $color-text-white;
+  font-weight: $font-weight-semibold;
+}
+
+.typeSelect {
+  display: flex;
+  gap: $spacing-sm;
+  flex-wrap: wrap;
+}
+
+.typeItem {
+  padding: 10rpx 24rpx;
+  border-radius: $radius-button;
+  background: $color-bg-hover;
+  transition: all $transition-base;
+
+  &:active {
+    opacity: 0.9;
+  }
+}
+
+.typeItemActive {
+  background: $color-primary;
+}
+
+.typeItemText {
+  font-size: $font-size-sm;
+  color: $color-text-secondary;
+}
+
+.typeItemTextActive {
+  color: $color-text-white;
+  font-weight: $font-weight-medium;
+}

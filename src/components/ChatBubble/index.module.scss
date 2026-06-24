@@ -1,0 +1,449 @@
+@use '@/styles/variables.scss' as *;
+
+.bubble {
+  display: flex;
+  margin-bottom: $spacing-md;
+  padding: 0 $page-padding;
+}
+
+.user {
+  flex-direction: row-reverse;
+}
+
+.assistant {
+  flex-direction: row;
+}
+
+.avatar {
+  width: 64rpx;
+  height: 64rpx;
+  border-radius: $radius-round;
+  background: $color-bg-hover;
+  @include flex-center;
+  flex-shrink: 0;
+  margin-top: 4rpx;
+}
+
+.user .avatar {
+  margin-left: $spacing-sm;
+}
+
+.assistant .avatar {
+  margin-right: $spacing-sm;
+}
+
+.avatarText {
+  font-size: 32rpx;
+}
+
+.avatarImg {
+  width: 100%;
+  height: 100%;
+  border-radius: $radius-round;
+}
+
+.content {
+  max-width: 560rpx;
+  padding: $spacing-md $spacing-lg;
+  border-radius: $radius-lg;
+  line-height: 1.6;
+  user-select: text;
+  -webkit-user-select: text;
+}
+
+.userContent {
+  background: linear-gradient(135deg, $color-primary 0%, $color-primary-light 100%);
+  border-radius: 16rpx 6rpx 16rpx 16rpx;
+  color: $color-text-white;
+}
+
+.assistantContent {
+  background: $color-bg-card;
+  border-radius: 6rpx 16rpx 16rpx 16rpx;
+  box-shadow: $shadow-card;
+  color: $color-text-primary;
+  overflow: hidden;
+}
+
+.textLine {
+  font-size: 30rpx;
+  line-height: 1.6;
+  margin-bottom: 4rpx;
+  user-select: text;
+  -webkit-user-select: text;
+}
+
+.userContent .textLine {
+  color: $color-text-white;
+}
+
+.assistantContent .textLine {
+  color: $color-text-primary;
+}
+
+.boldLine {
+  font-size: $font-size-md;
+  font-weight: $font-weight-semibold;
+  line-height: 1.6;
+  margin-bottom: 4rpx;
+  user-select: text;
+  -webkit-user-select: text;
+}
+
+.emptyLine {
+  height: 8rpx;
+}
+
+.linkText {
+  color: $color-primary;
+  font-size: 24rpx;
+  padding: 2rpx 8rpx;
+  background: rgba($color-primary, 0.08);
+  border-radius: 6rpx;
+  text-decoration: underline;
+}
+
+.userContent .linkText {
+  color: $color-text-white;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.tripCard {
+  margin-top: $spacing-md;
+  background: $color-bg-card;
+  border-radius: 12rpx;
+  overflow: hidden;
+  border: 1rpx solid #F0F0F2;
+  box-shadow: 0 2rpx 12rpx rgba(0,0,0,0.06);
+}
+
+.tripImage {
+  width: 100%;
+  height: 200rpx;
+}
+
+.tripBody {
+  padding: $spacing-md;
+}
+
+.tripTitle {
+  display: block;
+  font-size: 34rpx;
+  font-weight: $font-weight-bold;
+  color: $color-text-primary;
+  margin-bottom: $spacing-xs;
+}
+
+.tripDesc {
+  display: block;
+  font-size: $font-size-sm;
+  color: $color-text-secondary;
+  line-height: 1.6;
+  margin-bottom: $spacing-sm;
+}
+
+.tripMeta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: $spacing-sm;
+  padding-bottom: $spacing-sm;
+  border-bottom: 1rpx solid #F0F0F2;
+}
+
+.tripDate {
+  font-size: 22rpx;
+  color: $color-text-tertiary;
+}
+
+.tripDays {
+  font-size: 22rpx;
+  color: $color-primary;
+  font-weight: $font-weight-medium;
+  background: rgba($color-primary, 0.08);
+  padding: 2rpx 12rpx;
+  border-radius: 6rpx;
+}
+
+.tripSummary {
+  margin-bottom: $spacing-md;
+}
+
+.dayBlock {
+  margin-bottom: $spacing-sm;
+  padding: $spacing-sm;
+  background: #FAFBFC;
+  border-radius: 10rpx;
+  border: 1rpx solid #F0F0F2;
+}
+
+.dayLabel {
+  display: block;
+  font-size: 22rpx;
+  color: $color-text-tertiary;
+  margin-bottom: 8rpx;
+  font-weight: $font-weight-medium;
+}
+
+.actItem {
+  display: flex;
+  margin-bottom: 8rpx;
+  background: #FFF;
+  border-radius: 8rpx;
+  overflow: hidden;
+  border: 1rpx solid #F0F0F2;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.actItemClickable {
+  &:active {
+    background: #EEF7FB;
+    border-color: rgba($color-primary, 0.3);
+  }
+}
+
+.actArrow {
+  display: flex;
+  align-items: center;
+  padding: 0 12rpx;
+  flex-shrink: 0;
+}
+
+.actArrowText {
+  font-size: 20rpx;
+  color: $color-primary;
+  white-space: nowrap;
+}
+
+.actImage {
+  width: 80rpx;
+  height: 80rpx;
+  flex-shrink: 0;
+}
+
+.actBody {
+  flex: 1;
+  padding: 8rpx 12rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 0;
+}
+
+.actTitle {
+  display: block;
+  font-size: 24rpx;
+  color: $color-text-primary;
+  line-height: 1.4;
+  margin-bottom: 4rpx;
+}
+
+.actLink {
+  display: inline-flex;
+  align-items: center;
+  padding: 2rpx 10rpx;
+  background: rgba($color-primary, 0.08);
+  border-radius: 4rpx;
+  align-self: flex-start;
+
+  &:active {
+    background: rgba($color-primary, 0.15);
+  }
+}
+
+.actLinkText {
+  font-size: 20rpx;
+  color: $color-primary;
+  font-weight: $font-weight-medium;
+}
+
+.tripActions {
+  display: flex;
+  gap: $spacing-sm;
+}
+
+.detailBtn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 64rpx;
+  border: 2rpx solid $color-primary;
+  border-radius: $radius-button;
+  transition: all $transition-fast;
+
+  &:active {
+    background: rgba($color-primary, 0.05);
+  }
+}
+
+.detailBtnText {
+  font-size: 24rpx;
+  color: $color-primary;
+  font-weight: $font-weight-medium;
+}
+
+.adoptBtn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 64rpx;
+  background: linear-gradient(135deg, #E85D75, #F58A9B);
+  border-radius: $radius-button;
+  transition: all $transition-fast;
+
+  &:active {
+    opacity: 0.9;
+    transform: scale(0.98);
+  }
+}
+
+.adoptBtnSaved {
+  background: #ccc;
+  &:active {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.adoptBtnText {
+  font-size: 24rpx;
+  color: $color-text-white;
+  font-weight: $font-weight-medium;
+}
+
+.searchResults {
+  margin-top: $spacing-md;
+}
+
+.searchCard {
+  background: $color-bg-card;
+  border-radius: 12rpx;
+  overflow: hidden;
+  border: 1rpx solid #F0F0F2;
+  box-shadow: 0 2rpx 12rpx rgba(0, 0, 0, 0.06);
+  margin-bottom: $spacing-sm;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.searchImage {
+  width: 100%;
+  height: 160rpx;
+}
+
+.searchImagePlaceholder {
+  width: 100%;
+  height: 160rpx;
+  background: #f0f0f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8rpx;
+}
+
+.searchImagePlaceholderText {
+  font-size: 48rpx;
+  opacity: 0.4;
+}
+
+.searchBody {
+  padding: $spacing-md;
+}
+
+.searchTitle {
+  display: block;
+  font-size: 28rpx;
+  font-weight: $font-weight-semibold;
+  color: $color-text-primary;
+  margin-bottom: $spacing-xs;
+  line-height: 1.5;
+}
+
+.searchPrice {
+  display: block;
+  font-size: 24rpx;
+  color: #E85D75;
+  font-weight: $font-weight-semibold;
+  margin-bottom: $spacing-xs;
+}
+
+.searchDesc {
+  display: block;
+  font-size: 22rpx;
+  color: $color-text-secondary;
+  line-height: 1.5;
+  margin-bottom: $spacing-sm;
+}
+
+.searchLink {
+  display: flex;
+  align-items: center;
+  background: rgba($color-primary, 0.08);
+  border-radius: 8rpx;
+  padding: 8rpx 16rpx;
+
+  &:active {
+    background: rgba($color-primary, 0.15);
+  }
+}
+
+.searchLinkText {
+  font-size: 22rpx;
+  color: $color-primary;
+  font-weight: $font-weight-medium;
+}
+
+.searchActions {
+  display: flex;
+}
+
+.searchAddBtn {
+  display: flex;
+  align-items: center;
+  background: linear-gradient(135deg, #E85D75, #F58A9B);
+  border-radius: 8rpx;
+  padding: 8rpx 16rpx;
+
+  &:active {
+    opacity: 0.9;
+  }
+}
+
+.searchAddBtnText {
+  font-size: 22rpx;
+  color: $color-text-white;
+  font-weight: $font-weight-medium;
+}
+
+// 替换/不替换按钮
+.replaceActBtn {
+  padding: 8rpx 16rpx;
+  background: #4CAF50;
+  border-radius: $radius-xs;
+}
+
+.replaceActBtnText {
+  font-size: 22rpx;
+  color: $color-text-white;
+  font-weight: $font-weight-medium;
+}
+
+.keepBtn {
+  padding: 8rpx 16rpx;
+  background: #f3f4f6;
+  border-radius: $radius-xs;
+}
+
+.keepBtnText {
+  font-size: 22rpx;
+  color: $color-text-secondary;
+  font-weight: $font-weight-medium;
+}
+

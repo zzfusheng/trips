@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "openapi": []
+  },
+  "timeout": 30,
+  "triggers": [
+    {
+      "name": "dailyRefresh",
+      "type": "timer",
+      "config": "0 0 2 * * * *"
+    }
+  ],
+  "envVariables": {
+    "LLM_API_KEY": "",
+    "LLM_API_URL": "https://api.deepseek.com/chat/completions",
+    "LLM_MODEL": "deepseek-v4-pro"
+  }
+}

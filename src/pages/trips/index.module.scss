@@ -1,0 +1,90 @@
+@use '@/styles/variables.scss' as *;
+
+.page {
+  min-height: 100vh;
+  background: $color-bg-page;
+  padding: $spacing-lg $page-padding;
+  padding-bottom: calc(100rpx + var(--safe-area-bottom));
+}
+
+.empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 180rpx;
+}
+
+.emptyIcon {
+  font-size: 120rpx;
+  margin-bottom: $spacing-lg;
+  opacity: 0.5;
+}
+
+.emptyText {
+  font-size: $font-size-md;
+  color: $color-text-tertiary;
+  margin-bottom: $spacing-xl;
+  text-align: center;
+}
+
+.emptyBtn {
+  @include button-primary;
+  padding: $spacing-md $spacing-xl;
+  height: $button-height-md;
+
+  &:active {
+    opacity: 0.9;
+    transform: scale(0.98);
+  }
+}
+
+.emptyBtnText {
+  font-size: $font-size-md;
+  color: $color-text-white;
+  font-weight: $font-weight-semibold;
+}
+
+.tabs {
+  display: flex;
+  gap: $spacing-md;
+  margin-bottom: $spacing-lg;
+  background: $color-bg-card;
+  padding: 8rpx;
+  border-radius: $radius-lg;
+  box-shadow: $shadow-card;
+}
+
+.tab {
+  flex: 1;
+  padding: $spacing-sm $spacing-md;
+  border-radius: $radius-md;
+  background: transparent;
+  transition: all $transition-base;
+  text-align: center;
+
+  &:active {
+    opacity: 0.8;
+  }
+}
+
+.tabText {
+  font-size: $font-size-sm;
+  color: $color-text-secondary;
+  font-weight: $font-weight-medium;
+}
+
+.tabActive {
+  background: $color-primary;
+}
+
+.tabActive .tabText {
+  color: $color-text-white;
+  font-weight: $font-weight-semibold;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-lg;
+}

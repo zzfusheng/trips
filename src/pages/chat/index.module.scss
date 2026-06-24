@@ -1,0 +1,57 @@
+@use '@/styles/variables.scss' as *;
+
+.page {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: $color-bg-page;
+}
+
+.messages {
+  height: calc(100vh - 120rpx);
+  padding-top: $spacing-md;
+}
+
+.inputBar {
+  padding: $spacing-sm $page-padding;
+  padding-bottom: calc($spacing-sm + var(--safe-area-bottom));
+  background: $color-bg-card;
+  box-shadow: $shadow-float;
+  display: flex;
+  align-items: center;
+  gap: $spacing-sm;
+}
+
+.inputWrapper {
+  flex: 1;
+  background: $color-bg-hover;
+  border-radius: $radius-button;
+  padding: $spacing-sm $spacing-md;
+}
+
+.input {
+  width: 100%;
+  font-size: $font-size-md;
+  color: $color-text-primary;
+  line-height: $line-height-normal;
+}
+
+.sendBtn {
+  width: 72rpx;
+  height: 72rpx;
+  border-radius: $radius-round;
+  background: linear-gradient(135deg, $color-primary 0%, $color-primary-light 100%);
+  @include flex-center;
+  transition: all $transition-base;
+  flex-shrink: 0;
+
+  &:active {
+    opacity: 0.9;
+    transform: scale(0.95);
+  }
+}
+
+.sendText {
+  font-size: 28rpx;
+  color: $color-text-white;
+}

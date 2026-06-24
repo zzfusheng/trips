@@ -1,0 +1,74 @@
+@use '@/styles/variables.scss' as *;
+
+.page {
+  min-height: 100vh;
+  background: $color-bg-page;
+  padding: $spacing-lg $page-padding;
+}
+
+.section {
+  background: #fff;
+  border-radius: $radius-md;
+  padding: $spacing-md $page-padding;
+  margin-bottom: $spacing-md;
+}
+
+.sectionTitle {
+  font-size: $font-size-sm;
+  color: $color-text-tertiary;
+  margin-bottom: $spacing-md;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.rowLabel {
+  font-size: $font-size-md;
+  color: $color-text-primary;
+}
+
+.rowDesc {
+  font-size: $font-size-xs;
+  color: $color-text-tertiary;
+  margin-top: 6rpx;
+  line-height: 1.5;
+}
+
+.switch {
+  width: 88rpx;
+  height: 52rpx;
+  border-radius: 26rpx;
+  background: #ddd;
+  position: relative;
+  transition: background 0.2s;
+
+  &.active {
+    background: $color-primary;
+  }
+}
+
+.switchDot {
+  position: absolute;
+  top: 4rpx;
+  left: 4rpx;
+  width: 44rpx;
+  height: 44rpx;
+  border-radius: $radius-round;
+  background: #fff;
+  box-shadow: 0 2rpx 4rpx rgba(0, 0, 0, 0.15);
+  transition: left 0.2s;
+
+  &.active {
+    left: 40rpx;
+  }
+}
+
+.tip {
+  font-size: $font-size-xs;
+  color: $color-text-disabled;
+  margin-top: $spacing-lg;
+  line-height: 1.6;
+}

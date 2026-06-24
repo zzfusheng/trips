@@ -1,0 +1,60 @@
+@use '@/styles/variables.scss' as *;
+
+.page {
+  min-height: 100vh;
+  background: $color-bg-page;
+  padding: $spacing-lg $page-padding;
+}
+
+.card {
+  background: #fff;
+  border-radius: $radius-md;
+  padding: $spacing-lg $page-padding;
+}
+
+.desc {
+  font-size: $font-size-sm;
+  color: $color-text-tertiary;
+  margin-bottom: $spacing-md;
+  line-height: 1.6;
+}
+
+.textarea {
+  width: 100%;
+  min-height: 240rpx;
+  padding: $spacing-md;
+  background: $color-bg-page;
+  border-radius: $radius-sm;
+  font-size: $font-size-sm;
+  color: $color-text-primary;
+  box-sizing: border-box;
+}
+
+.contactInput {
+  width: 100%;
+  height: 80rpx;
+  padding: 0 $spacing-md;
+  background: $color-bg-page;
+  border-radius: $radius-sm;
+  font-size: $font-size-sm;
+  color: $color-text-primary;
+  margin-top: $spacing-md;
+  box-sizing: border-box;
+}
+
+.submitBtn {
+  margin-top: $spacing-lg;
+  width: 100%;
+  height: 88rpx;
+  border-radius: $radius-md;
+  background: $color-primary;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.submitBtnText {
+  font-size: $font-size-md;
+  color: #fff;
+  font-weight: 500;
+}

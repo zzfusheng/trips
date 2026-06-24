@@ -1,0 +1,421 @@
+@use '@/styles/variables.scss' as *;
+
+.page {
+  min-height: 100vh;
+  background: $color-bg-page;
+  padding-bottom: calc(200rpx + var(--safe-area-bottom));
+}
+
+.header {
+  position: relative;
+}
+
+.image {
+  width: 100%;
+  height: 400rpx;
+}
+
+.imagePlaceholder {
+  width: 100%;
+  height: 400rpx;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.imagePlaceholderText {
+  font-size: 96rpx;
+  opacity: 0.7;
+}
+
+.headerOverlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: $spacing-lg $page-padding;
+  background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.7) 100%);
+}
+
+.title {
+  font-size: $font-size-xxl;
+  font-weight: $font-weight-bold;
+  color: $color-text-white;
+  display: block;
+  margin-bottom: $spacing-xs;
+}
+
+.dest {
+  font-size: $font-size-sm;
+  color: rgba(255, 255, 255, 0.9);
+  display: block;
+  margin-bottom: $spacing-sm;
+}
+
+.tags {
+  display: flex;
+  gap: $spacing-xs;
+}
+
+.tag {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: $radius-xs;
+  padding: 4rpx 12rpx;
+}
+
+.tagText {
+  font-size: $font-size-xs;
+  color: $color-text-white;
+}
+
+.infoBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: $color-bg-card;
+  margin: $spacing-md $page-padding;
+  border-radius: $radius-md;
+  padding: $spacing-md $spacing-lg;
+  box-shadow: $shadow-card;
+}
+
+.infoItem {
+  display: flex;
+  align-items: center;
+  gap: $spacing-xs;
+}
+
+.infoIcon {
+  font-size: 28rpx;
+}
+
+.infoText {
+  font-size: $font-size-sm;
+  color: $color-text-secondary;
+}
+
+.desc {
+  margin: 0 $page-padding $spacing-md;
+  background: $color-bg-card;
+  border-radius: $radius-md;
+  padding: $spacing-lg;
+  box-shadow: $shadow-card;
+}
+
+.descTitle {
+  font-size: $font-size-lg;
+  font-weight: $font-weight-semibold;
+  color: $color-text-primary;
+  display: block;
+  margin-bottom: $spacing-sm;
+}
+
+.descText {
+  font-size: 30rpx;
+  color: $color-text-secondary;
+  line-height: $line-height-loose;
+}
+
+.section {
+  margin: 0 $page-padding $spacing-md;
+}
+
+.sectionTitle {
+  font-size: $font-size-lg;
+  font-weight: $font-weight-semibold;
+  color: $color-text-primary;
+  display: block;
+  margin-bottom: $spacing-md;
+}
+
+.dayCard {
+  background: $color-bg-card;
+  border-radius: $radius-md;
+  padding: $spacing-lg;
+  box-shadow: $shadow-card;
+  margin-bottom: $spacing-md;
+}
+
+.dayHeader {
+  display: flex;
+  align-items: center;
+  gap: $spacing-sm;
+  margin-bottom: $spacing-md;
+}
+
+.dayBadge {
+  background: $color-primary;
+  border-radius: $radius-xs;
+  padding: 4rpx 16rpx;
+}
+
+.dayBadgeText {
+  font-size: $font-size-sm;
+  color: $color-text-white;
+  font-weight: $font-weight-medium;
+}
+
+.dayLabel {
+  font-size: 30rpx;
+  color: $color-text-primary;
+  font-weight: $font-weight-medium;
+}
+
+.dateLabel {
+  font-size: $font-size-xs;
+  color: $color-text-tertiary;
+  margin-left: auto;
+}
+
+.activities {
+  padding-left: $spacing-md;
+  border-left: 2rpx solid $color-primary-light;
+}
+
+.actItem {
+  position: relative;
+  padding-left: $spacing-lg;
+  padding-bottom: $spacing-md;
+
+  &:last-child {
+    padding-bottom: 0;
+  }
+}
+
+.actDot {
+  position: absolute;
+  left: -10rpx;
+  top: 8rpx;
+  width: 18rpx;
+  height: 18rpx;
+  border-radius: $radius-round;
+  background: $color-primary;
+  border: 3rpx solid $color-bg-card;
+}
+
+.actTime {
+  font-size: 24rpx;
+  color: $color-primary;
+  font-weight: $font-weight-medium;
+  display: block;
+  margin-bottom: 4rpx;
+}
+
+.actTitle {
+  font-size: 30rpx;
+  color: $color-text-primary;
+  font-weight: $font-weight-medium;
+  display: block;
+  margin-bottom: 4rpx;
+}
+
+.actDesc {
+  font-size: 24rpx;
+  color: $color-text-tertiary;
+  display: block;
+  margin-bottom: 4rpx;
+}
+
+.actLocation {
+  font-size: $font-size-xs;
+  color: $color-text-tertiary;
+  display: block;
+}
+
+.actThumb {
+  width: 100%;
+  height: 160rpx;
+  border-radius: 8rpx;
+  margin-bottom: 8rpx;
+}
+
+.actThumbPlaceholder {
+  width: 100%;
+  height: 160rpx;
+  border-radius: 8rpx;
+  margin-bottom: 8rpx;
+  background: linear-gradient(135deg, #e8eaf6 0%, #d1c4e9 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.actThumbPlaceholderText {
+  font-size: 48rpx;
+  opacity: 0.6;
+}
+
+.actLine {
+  display: flex;
+  align-items: center;
+  gap: 8rpx;
+  margin-bottom: 4rpx;
+}
+
+.actDetailLink {
+  display: inline-flex;
+  align-items: center;
+  padding: 4rpx 10rpx;
+  background: rgba($color-primary, 0.08);
+  border-radius: 4rpx;
+  margin-top: 4rpx;
+  align-self: flex-start;
+
+  &:active {
+    background: rgba($color-primary, 0.15);
+  }
+}
+
+.actDetailLinkText {
+  font-size: 20rpx;
+  color: $color-primary;
+  font-weight: $font-weight-medium;
+}
+
+.bottomBar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: $spacing-md $page-padding;
+  padding-bottom: calc($spacing-md + var(--safe-area-bottom));
+  background: $color-bg-card;
+  box-shadow: $shadow-float;
+}
+
+.adoptBtn {
+  width: 100%;
+  height: $button-height-lg;
+  background: linear-gradient(135deg, $color-accent 0%, $color-accent-light 100%);
+  border-radius: $radius-button;
+  @include flex-center;
+  gap: $spacing-xs;
+  transition: all $transition-base;
+
+  &:active {
+    opacity: 0.9;
+    transform: scale(0.98);
+  }
+}
+
+.adoptBtnText {
+  font-size: $font-size-lg;
+  color: $color-text-white;
+  font-weight: $font-weight-semibold;
+}
+
+// ========== 活动编辑 ==========
+
+.actActions {
+  display: flex;
+  gap: 16rpx;
+  margin-top: 8rpx;
+}
+
+.editBtn, .replaceBtn, .delBtn {
+  padding: 4rpx 12rpx;
+  border-radius: $radius-xs;
+  font-size: $font-size-xs;
+}
+
+.editBtn {
+  background: #e8f4fd;
+  color: $color-primary;
+}
+
+.replaceBtn {
+  background: #fef3e8;
+  color: #f59e0b;
+}
+
+.delBtn {
+  background: #fde8e8;
+  color: #e74c3c;
+}
+
+.addActBtn {
+  margin-top: 16rpx;
+  padding: 12rpx 0;
+  border: 2rpx dashed #d1d5db;
+  border-radius: $radius-sm;
+  text-align: center;
+  font-size: $font-size-sm;
+  color: $color-text-tertiary;
+}
+
+// ========== 编辑面板 ==========
+
+.editCard {
+  background: #f9fafb;
+  border-radius: $radius-sm;
+  padding: $spacing-md;
+  margin: -8rpx -8rpx 0 -8rpx;
+}
+
+.editRow {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12rpx;
+}
+
+.editLabel {
+  width: 80rpx;
+  font-size: $font-size-sm;
+  color: $color-text-secondary;
+  flex-shrink: 0;
+}
+
+.editInput {
+  flex: 1;
+  height: 56rpx;
+  padding: 0 16rpx;
+  background: #fff;
+  border-radius: $radius-xs;
+  font-size: $font-size-sm;
+  border: 1rpx solid #e5e7eb;
+}
+
+.typeRow {
+  display: flex;
+  gap: 12rpx;
+  flex-wrap: wrap;
+}
+
+.typeChip, .typeChipActive {
+  padding: 6rpx 16rpx;
+  border-radius: 20rpx;
+  font-size: $font-size-xs;
+  background: #fff;
+  border: 1rpx solid #d1d5db;
+  color: $color-text-secondary;
+}
+
+.typeChipActive {
+  background: $color-primary;
+  border-color: $color-primary;
+  color: #fff;
+}
+
+.editActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 16rpx;
+  margin-top: 12rpx;
+}
+
+.cancelBtn {
+  padding: 10rpx 24rpx;
+  border-radius: $radius-xs;
+  background: #f3f4f6;
+  font-size: $font-size-sm;
+  color: $color-text-secondary;
+}
+
+.saveBtn {
+  padding: 10rpx 24rpx;
+  border-radius: $radius-xs;
+  background: $color-primary;
+  font-size: $font-size-sm;
+  color: #fff;
+}

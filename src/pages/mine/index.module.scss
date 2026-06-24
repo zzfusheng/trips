@@ -1,0 +1,355 @@
+@use '@/styles/variables.scss' as *;
+
+.page {
+  min-height: 100vh;
+  background: $color-bg-page;
+  padding-bottom: calc(100rpx + var(--safe-area-bottom));
+}
+
+// ===== 封面背景 =====
+.coverWrap {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  transition: height 0.1s ease-out;
+}
+
+.coverImg {
+  width: 100%;
+  height: 100%;
+}
+
+.coverOverlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 12rpx 0 20rpx;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.35));
+  @include flex-center;
+}
+
+.coverHint {
+  font-size: $font-size-xs;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+// ===== 头像区（叠在封面下方） =====
+.avatarRow {
+  display: flex;
+  justify-content: center;
+  margin-top: -70rpx;
+  position: relative;
+  z-index: 2;
+}
+
+.avatarWrap {
+  position: relative;
+  width: 140rpx;
+  height: 140rpx;
+  border-radius: $radius-round;
+  overflow: hidden;
+  border: 4rpx solid #fff;
+  box-shadow: 0 4rpx 12rpx rgba(0, 0, 0, 0.12);
+}
+
+.avatarImg {
+  width: 100%;
+  height: 100%;
+}
+
+.avatarPlaceholder {
+  width: 100%;
+  height: 100%;
+  background: $color-bg-page;
+  @include flex-center;
+}
+
+.avatarEmoji {
+  font-size: 64rpx;
+}
+
+.avatarBadge {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 44rpx;
+  height: 44rpx;
+  border-radius: $radius-round;
+  background: rgba(0, 0, 0, 0.4);
+  @include flex-center;
+}
+
+.avatarBadgeText {
+  font-size: 24rpx;
+}
+
+// ===== 昵称 / 简介 =====
+.infoSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: calc(#{$spacing-md} + 90rpx) $page-padding $spacing-md;
+  margin-top: -70rpx;
+  background: #fff;
+  border-radius: $radius-lg $radius-lg 0 0;
+  position: relative;
+  z-index: 1;
+}
+
+.nickname {
+  font-size: $font-size-lg;
+  font-weight: $font-weight-semibold;
+  color: $color-text-primary;
+}
+
+.bio {
+  font-size: $font-size-sm;
+  color: $color-text-tertiary;
+  margin-top: 4rpx;
+}
+
+.nameRow {
+  display: flex;
+  align-items: center;
+  gap: 10rpx;
+}
+
+.editIcon {
+  @include flex-center;
+  width: 48rpx;
+  height: 48rpx;
+  border-radius: $radius-round;
+  background: $color-bg-page;
+  transition: all $transition-base;
+
+  &:active {
+    background: $color-bg-hover;
+  }
+}
+
+.editIconText {
+  font-size: 24rpx;
+}
+
+// ===== 编辑态 =====
+.editFields {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  gap: $spacing-md;
+  padding: $spacing-sm 0;
+}
+
+.nicknameInput {
+  width: 480rpx;
+  height: 80rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: $font-size-lg;
+  font-weight: $font-weight-semibold;
+  color: $color-text-primary;
+  padding: 0 24rpx;
+  background: $color-bg-page;
+  border-radius: $radius-md;
+  border: none;
+  line-height: 80rpx;
+}
+
+.bioInput {
+  width: 480rpx;
+  text-align: center;
+  font-size: $font-size-sm;
+  color: $color-text-secondary;
+  padding: 14rpx 24rpx;
+  background: $color-bg-page;
+  border-radius: $radius-md;
+  border: none;
+  min-height: 70rpx;
+}
+
+.editActions {
+  display: flex;
+  align-items: center;
+  gap: 24rpx;
+  margin-top: 4rpx;
+}
+
+.cancelBtn {
+  padding: 10rpx 40rpx;
+  background: $color-bg-page;
+  border-radius: 40rpx;
+  border: 2rpx solid $color-border;
+
+  &:active {
+    background: $color-bg-hover;
+  }
+}
+
+.cancelBtnText {
+  font-size: $font-size-sm;
+  color: $color-text-secondary;
+}
+
+.saveBtn {
+  padding: 10rpx 40rpx;
+  background: $color-primary;
+  border-radius: 40rpx;
+
+  &:active {
+    opacity: 0.85;
+  }
+}
+
+.saveBtnText {
+  font-size: $font-size-sm;
+  color: #fff;
+  font-weight: $font-weight-semibold;
+}
+
+// ===== 统计 =====
+.stats {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  margin: 0 $page-padding;
+  border-radius: $radius-md;
+  padding: $spacing-md;
+  box-shadow: 0 2rpx 8rpx rgba(0, 0, 0, 0.04);
+}
+
+.statItem {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4rpx;
+}
+
+.statNum {
+  font-size: $font-size-xxl;
+  font-weight: $font-weight-bold;
+  color: $color-primary;
+}
+
+.statLabel {
+  font-size: $font-size-xs;
+  color: $color-text-tertiary;
+}
+
+.statDivider {
+  width: 2rpx;
+  height: 48rpx;
+  background: $color-border;
+}
+
+// ===== 菜单 =====
+.menu {
+  background: #fff;
+  margin: $spacing-md $page-padding;
+  border-radius: $radius-md;
+  overflow: hidden;
+  box-shadow: 0 2rpx 8rpx rgba(0, 0, 0, 0.04);
+}
+
+.menuItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: $spacing-lg;
+  border-bottom: 1rpx solid $color-divider;
+  transition: all $transition-base;
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  &:active {
+    background: $color-bg-hover;
+  }
+}
+
+.menuLeft {
+  display: flex;
+  align-items: center;
+  gap: $spacing-sm;
+}
+
+.menuIcon {
+  font-size: 32rpx;
+}
+
+.menuLabel {
+  font-size: $font-size-md;
+  color: $color-text-primary;
+}
+
+.menuArrow {
+  font-size: 28rpx;
+  color: $color-text-tertiary;
+}
+
+.menuItemDanger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: $spacing-lg;
+  transition: all $transition-base;
+
+  &:active {
+    background: $color-bg-hover;
+  }
+}
+
+.menuLabelDanger {
+  font-size: $font-size-md;
+  color: #ff4d4f;
+}
+
+.version {
+  display: flex;
+  justify-content: center;
+  padding: $spacing-xl;
+}
+
+.versionText {
+  font-size: $font-size-xs;
+  color: $color-text-disabled;
+}
+
+// ===== 全屏背景浮层 =====
+.fullCoverOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #000;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fullCoverImg {
+  width: 100%;
+  height: 100%;
+}
+
+.fullCoverHint {
+  position: absolute;
+  bottom: 80rpx;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.fullCoverHintText {
+  font-size: $font-size-sm;
+  color: rgba(255, 255, 255, 0.5);
+}

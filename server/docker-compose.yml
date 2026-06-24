@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  trips-server:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: trips-server
+    restart: always
+    ports:
+      - "3000:3000"
+    env_file:
+      - .env
+    environment:
+      - NODE_ENV=production
+    healthcheck:
+      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://8.153.15.245:3000/api/health"]
+      interval: 30s
+      timeout: 3s
+      retries: 3
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"

@@ -1,0 +1,159 @@
+@use '@/styles/variables.scss' as *;
+
+.page {
+  min-height: 100vh;
+  background: $color-bg-page;
+  padding-bottom: calc(100rpx + var(--safe-area-bottom));
+}
+
+.catScroll {
+  @include scroll-x-container;
+  padding: $spacing-md $page-padding;
+  background: $color-bg-card;
+}
+
+.catItem {
+  @include scroll-x-item(auto);
+  display: inline-block;
+  padding: 10rpx 28rpx;
+  border-radius: $radius-button;
+  margin-right: $spacing-sm;
+  background: $color-bg-hover;
+  transition: all $transition-base;
+
+  &:active {
+    opacity: 0.9;
+  }
+}
+
+.catText {
+  font-size: $font-size-sm;
+  color: $color-text-secondary;
+}
+
+.catActive {
+  background: $color-primary;
+}
+
+.catActiveText {
+  color: $color-text-white;
+  font-weight: $font-weight-medium;
+}
+
+.grid {
+  padding: $spacing-md $page-padding;
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-md;
+}
+
+.destCard {
+  background: $color-bg-card;
+  border-radius: $radius-lg;
+  overflow: hidden;
+  box-shadow: $shadow-card;
+  transition: all $transition-base;
+
+  &:active {
+    transform: scale(0.98);
+  }
+}
+
+.imageWrap {
+  position: relative;
+  width: 100%;
+  height: 320rpx;
+}
+
+.destImage {
+  width: 100%;
+  height: 100%;
+}
+
+.favStar {
+  position: absolute;
+  top: 12rpx;
+  right: 12rpx;
+  width: 56rpx;
+  height: 56rpx;
+  border-radius: $radius-round;
+  background: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(8rpx);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+
+  &:active {
+    transform: scale(1.2);
+    transition: transform 0.15s ease;
+  }
+}
+
+.favStarText {
+  font-size: 32rpx;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.favStarActive .favStarText {
+  color: #FFD700;
+  text-shadow: 0 0 8rpx rgba(255, 215, 0, 0.6);
+}
+
+.destBody {
+  padding: $spacing-md $spacing-lg;
+}
+
+.destName {
+  font-size: $font-size-lg;
+  font-weight: $font-weight-semibold;
+  color: $color-text-primary;
+  margin-right: $spacing-xs;
+}
+
+.destCountry {
+  font-size: $font-size-xs;
+  color: $color-text-tertiary;
+  display: block;
+  margin-bottom: $spacing-xs;
+}
+
+.destDesc {
+  font-size: $font-size-sm;
+  color: $color-text-secondary;
+  line-height: $line-height-loose;
+  @include text-ellipsis-multi(2);
+  margin-bottom: $spacing-sm;
+}
+
+.destFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.destTags {
+  display: flex;
+  gap: $spacing-xs;
+}
+
+.destTag {
+  background: $color-tag-bg;
+  border-radius: $radius-xs;
+  padding: 4rpx 12rpx;
+}
+
+.destTagText {
+  font-size: $font-size-xs;
+  color: $color-tag-text;
+}
+
+.destRating {
+  display: flex;
+  align-items: center;
+}
+
+.destRatingText {
+  font-size: $font-size-sm;
+  color: $color-warning;
+}
